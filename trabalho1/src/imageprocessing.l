@@ -52,6 +52,11 @@ void yyerror(char *);
   return VEZES;
 }
 
+[/] {
+  printf("Achei um DIV\n");
+  return DIV;
+}
+
 \n   {
          return EOL;
        }
