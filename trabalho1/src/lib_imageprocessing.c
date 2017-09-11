@@ -80,3 +80,10 @@ void salvar_imagem(char *nome_do_arquivo, imagem *I) {
   FreeImage_Save(FIF_JPEG, bitmapOut, nome_do_arquivo, JPEG_DEFAULT);
 }
 
+void brilho(float n){ 
+  printf("Multiplicando todods os pixels por %f\n", n);
+}
+
+int valor_maximo(char *nome_do_arquivo){
+  printf("Calculando o valor máximo...\n");
+}
