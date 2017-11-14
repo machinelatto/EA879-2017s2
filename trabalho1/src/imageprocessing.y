@@ -52,7 +52,7 @@ EXPRESSAO:
         liberar_imagem(&I);
     }
 
-    | ABRE STRING FECHA{
+    | ABRE STRING FECHA {
         printf("Abrindo imagem %s\n", $2);
         imagem I = abrir_imagem($2);
         valor_maximo(&I);
