@@ -39,6 +39,7 @@ EXPRESSAO:
         brilho(&I,$5);
         printf("Salvando imagem em %s\n", $1);  
         salvar_imagem($1, &I);
+        liberar_imagem(&I);
     }
     
     | STRING IGUAL STRING DIV FLOAT {
@@ -48,12 +49,14 @@ EXPRESSAO:
         brilho(&I,$5);
         printf("Salvando imagem em %s\n", $1);  
         salvar_imagem($1, &I);
+        liberar_imagem(&I);
     }
 
     | ABRE STRING FECHA{
         printf("Abrindo imagem %s\n", $2);
         imagem I = abrir_imagem($2);
         valor_maximo(&I);
+        liberar_imagem(&I);
     }
     ;
 
